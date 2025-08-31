@@ -1,1 +1,26 @@
-.venv
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environment
+.venv/
+env/
+venv/
+
+# VSCode settings
+.vscode/
+
+# MacOS files
+.DS_Store
+
+# Logs
+*.log
+
+# Database files (if any)
+*.sqlite3
+
+# Python egg files
+*.egg-info/
+dist/
+build/

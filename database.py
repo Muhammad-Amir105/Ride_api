@@ -1,8 +1,7 @@
-# database.py
 from contextlib import asynccontextmanager
 from sqlalchemy.ext.asyncio import create_async_engine, AsyncSession
 from sqlalchemy.orm import sessionmaker
-from models import Base  # import the Base from models.py
+from models import Base
 
 DATABASE_URL = "postgresql+asyncpg://postgres:937393@localhost:5432/ride_api"
 

@@ -1,3 +1,4 @@
+import traceback
 from fastapi import FastAPI, Depends, Query, Request,HTTPException, WebSocketDisconnect, status
 from fastapi.responses import JSONResponse
 from sqlalchemy.ext.asyncio import AsyncSession
@@ -5,7 +6,6 @@ from database import engine, Base, get_db, get_db_session
 import schemas, crud, models
 from auth import get_current_user, get_current_user_from_token
 from models import User
-import traceback
 from fastapi import WebSocket
 from websocket_manager import manager
 

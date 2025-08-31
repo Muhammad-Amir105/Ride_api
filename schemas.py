@@ -1,7 +1,7 @@
-from pydantic import BaseModel,EmailStr,StringConstraints, validator
 import re
-from typing import Optional,Annotated
 from enum import Enum
+from typing import Optional,Annotated
+from pydantic import BaseModel,EmailStr,StringConstraints, validator
 
 
 class RideStatus(str, Enum):

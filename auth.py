@@ -1,4 +1,5 @@
-# auth.py
+import schemas
+from fastapi.security import APIKeyHeader
 from datetime import datetime, timedelta
 from jose import JWTError, jwt
 from passlib.context import CryptContext
@@ -8,8 +9,7 @@ from sqlalchemy.ext.asyncio import AsyncSession
 from sqlalchemy.future import select
 from database import get_db
 from models import User
-import schemas
-from fastapi.security import APIKeyHeader
+
 
 #from utils import hash_password, verify_password
 

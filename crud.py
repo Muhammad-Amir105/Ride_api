@@ -1,9 +1,9 @@
+import schemas
 from sqlalchemy.future import select
 from sqlalchemy.ext.asyncio import AsyncSession
 from fastapi import HTTPException
 from models import Ride, RideStatus, User
 from auth import hash_password, verify_password, create_access_token, create_refresh_token
-import schemas
 
 
 # ✅ Create a new ride

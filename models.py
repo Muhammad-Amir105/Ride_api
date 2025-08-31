@@ -1,6 +1,7 @@
-from sqlalchemy import Column, Integer, String, Enum, Float,UniqueConstraint
-from sqlalchemy.orm import declarative_base
 import enum
+from sqlalchemy.orm import declarative_base
+from sqlalchemy import Column, Integer, String, Enum, Float,UniqueConstraint
+
 
 Base = declarative_base()
 
