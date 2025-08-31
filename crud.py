@@ -20,16 +20,16 @@ async def create_ride(db: AsyncSession, ride_data: schemas.RideCreate, rider: Us
         Ride: The newly created ride object.
     """
     new_ride = Ride(
-        rider_name=rider.username,  # Automatically assign the rider's username
-        driver_id=None,             # No driver assigned initially
+        rider_name=rider.username,
+        driver_id=None,
         pickup_location=ride_data.pickup_location,
         dropoff_location=ride_data.dropoff_location,
         price=ride_data.price,
-        status=RideStatus.pending,  # New rides start as pending
+        status=RideStatus.pending, 
     )
     db.add(new_ride)
-    await db.commit()       # Save to DB
-    await db.refresh(new_ride)  # Refresh object with DB-generated fields (like ID)
+    await db.commit()
+    await db.refresh(new_ride)
     return new_ride
 
 
@@ -45,12 +45,12 @@ async def create_user(db: AsyncSession, user_data: schemas.UserCreate):
     Returns:
         User: The newly created user object.
     """
-    hashed_pw = hash_password(user_data.password)  # Securely hash password
+    hashed_pw = hash_password(user_data.password)
     user = User(
         username=user_data.username,
         email=user_data.email,
         password=hashed_pw,
-        role=user_data.role  # 'rider' or 'driver'
+        role=user_data.role
     )
     db.add(user)
     await db.commit()
